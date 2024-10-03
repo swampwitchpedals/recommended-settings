@@ -37,3 +37,7 @@ montage -background none \
        	-shadow -geometry +1+1 \
 	-tile 4x2 -geometry $OFFSET_GEOMETRY png:- \
 | magick - -geometry +35+65 $8 +swap -composite -crop $CROP +repage $9
+
+
+# Then create an audio file
+# ffmpeg -i setting.png -i setting.m4a -acodec libaac  -pix_fmt yuvj420p -vcodec libx264  -ac 2 -ar 48000 setting-output.mov
